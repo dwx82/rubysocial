@@ -45,8 +45,8 @@ jobs:
           image: ${{ secrets.DOCKER_HUB_LOGIN }}/rubysocial:${{ steps.get_version.outputs.VERSION }}
           path: /usr/src/app/public/.
 
-      - name: Configure AWS CredentialsCreds for GCS
-        uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
+      - name: 'Set up Cloud SDK'
+        uses: 'google-github-actions/setup-gcloud@v0'
         with:
           service_account_key: ${{ secrets.GCS_SA_KEY }}
           project_id: ${{ secrets.GCS_PROJECT }}
