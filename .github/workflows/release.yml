@@ -6,7 +6,7 @@ on:
 jobs:
   backend-frontend:
     name: Create backend and frontend releases
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
     steps:
       - name: Check Out Repo
         uses: actions/checkout@v2

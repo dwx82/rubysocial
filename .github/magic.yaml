@@ -1,0 +1,34 @@
+---
+name: magic
+on: 
+  workflow_dispatch: 
+    inputs: 
+      version: 
+        description: 'Version to release (ex. v0.1)' 
+        required: true 
+ 
+jobs: 
+  deploy: 
+    name: Deploy rubysocial to production cluster 
+    runs-on: ubuntu-18.04
+    steps: 
+      - name: Check Out Repo 
+        uses: actions/checkout@v2 
+
+      - name: Install Helm
+        run: |
+          curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
+          chmod 700 get_helm.sh
+          ./get_helm.sh
+
+      - name: Install kube config 
+        env: 
+          INPUT_KUBECONFIG: ${{ secrets.KUBE_CONFIG_DATA }} 
+        run: | 
+          mkdir ~/.kube/ || true 
+          echo "${INPUT_KUBECONFIG}" > ~/.kube/config 
+          chmod 700 ~/.kube/config   
+
+      - name: Deploy to Kubernetes 
+        run: 
+          helm upgrade rubysocial ./rubysocial/ --install --wait --atomic  --set=version=${{ github.event.inputs.version }} --kubeconfig ~/.kube/config 
