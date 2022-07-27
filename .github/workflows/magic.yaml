@@ -20,7 +20,7 @@ jobs:
           curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
           chmod 700 get_helm.sh
           ./get_helm.sh
-          
+
       - name: 'Set up Cloud SDK'
         uses: 'google-github-actions/setup-gcloud@v0'
         with:
@@ -38,4 +38,4 @@ jobs:
 
       - name: Deploy to Kubernetes 
         run: 
-          helm upgrade rubysocial ./rubysocial/ --install --wait --atomic  --set=version=${{ github.event.inputs.version }} --kubeconfig ~/.kube/config 
+          helm upgrade rubysocial ./deployment/rubysocial/ --install --wait --atomic  --set=version=${{ github.event.inputs.version }} --kubeconfig ~/.kube/config 
