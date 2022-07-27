@@ -54,4 +54,4 @@ jobs:
 
       - name: Copy files to GCS
         run: |
-          gsutil rsync ${{ steps.extract.outputs.destination }}/packs gs://${{ secrets.GCS_BUCKET }}/${{ steps.get_version.outputs.VERSION }}/packs
+          gsutil rsync -r ${{ steps.extract.outputs.destination }}/packs gs://${{ secrets.GCS_BUCKET }}/${{ steps.get_version.outputs.VERSION }}/packs
