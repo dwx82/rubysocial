@@ -38,4 +38,4 @@ jobs:
 
       - name: Deploy to Kubernetes 
         run: 
-          helm upgrade rubysocial ./deployment/rubysocial/ --install --wait --atomic  --set=version=${{ github.event.inputs.version }} #--kubeconfig ~/.kube/config 
+          helm upgrade rubysocial ./deployment/rubysocial/ --install --wait --atomic  --set=version=${{ github.event.inputs.version }} --kubeconfig ~/.kube/config 
