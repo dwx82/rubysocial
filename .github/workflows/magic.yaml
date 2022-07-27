@@ -1,5 +1,5 @@
 ---
-name: magic
+name: prodmagic
 on: 
   workflow_dispatch: 
     inputs: 
