@@ -1,7 +1,7 @@
 ![example workflow](https://github.com/dwx82/rubysocial/actions/workflows/release.yml/badge.svg)
-![example event parameter](https://github.com/dwx82/rubysocial/actions/workflows/release.yml/badge.svg?event=push)
 ![example workflow](https://github.com/dwx82/rubysocial/actions/workflows/magic.yaml/badge.svg)
-![example event parameter](https://github.com/dwx82/rubysocial/actions/workflows/magic.yaml/badge.svg?event=push)
+![example workflow](https://github.com/dwx82/rubysocial/actions/workflows/prodrelease.yml/badge.svg)
+![example workflow](https://github.com/dwx82/rubysocial/actions/workflows/prodmagic.yaml/badge.svg)
 ```
 Полный CI/CD используя GiHubActions, GCP, k8s, Terraform, DockerHub.
 Мониторинг - Prometheus + Graphana.
