@@ -2,7 +2,7 @@ name: prodrelease
 on:
   push:
     tags:
-      - 'p*' # Push events to matching v*, i.e. v1.0, v20.15.10
+      - 'p*' # Push events to matching v*, i.e. p1.0, p20.15.10
 jobs:
   backend-frontend:
     name: Create backend and frontend releases
