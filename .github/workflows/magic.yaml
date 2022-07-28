@@ -3,7 +3,7 @@ name: magic
 on: 
   workflow_run:
     workflows: ["release"]
-    branches: [main]
+    branches: [master]
     types: 
       - completed
  
