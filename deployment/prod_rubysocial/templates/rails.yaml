@@ -44,7 +44,7 @@ spec:
                 name: db-secret 
                 key: password
           - name: STATIC_FILES_ENDPOINT 
-            value: https://storage.cloud.google.com/megateam_bucket_production/
+            value: https://storage.cloud.google.com/megateam_bucket_production
           - name: FRONTEND_VERSION 
             value: {{ .Values.version }} 
 
