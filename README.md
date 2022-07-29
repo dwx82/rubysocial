@@ -19,5 +19,14 @@ https://blog.knoldus.com/how-to-create-gke-on-gcp-using-terraform/
 https://learnk8s.io/terraform-gke
 https://antonputra.com/google/create-gke-cluster-using-terraform/#create-cloud-nat-in-gcp-using-terraform
 https://kubernetes.io/docs/tasks/tools/
+#=======================================================================================================================
+
+Все действия выполнялись на:
+MBP / Intel/ MacOS Monterey
+
+#=======================================================================================================================
+
+Для продолжения вам потребуется brew:
+https://www.google.com/search?q=brew+install&rlz=1C5CHFA_enUA956UA956&oq=brew+insta&aqs=chrome.0.0i512j69i57j0i67j0i20i263i512j0i512l6.10866j0j7&sourceid=chrome&ie=UTF-8
 
 ```
